@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  Github Profile
+</h1>
 
-## Getting Started
+<p align="center">
+<a href="#functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">License</a>
+</p>
 
-First, run the development server:
+<p align="center">
+ <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=49AA26&labelColor=000000" alt="PRs welcome!" />
+
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
+
+<br>
+
+<p align="left">
+  Project status: development
+</p>
+
+<a id="functionalities"></a>
+
+## Functionalities
+
+- [ ] Search profile
+- [ ] Show profile
+- [ ] Shows an alert if the username is not valid
+- [ ] Dark mode
+
+## Application demo
+
+Access: [https://github-profile-khaki.vercel.app](https://github-profile-khaki.vercel.app/)
+
+<a id="requirements"></a>
+
+## Requirements
+
+Before you start, you need to have it installed on your computer:
+
+- Git
+- Node v14 ou superior
+- NPM
+
+### Executing o Github Profile
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone this repository
+$ git clone https://github.com/tarcisiodelmondes/github-profile
+
+# Access the project folder in the terminal/cmd
+$ cd github-profile
+
+# Install the dependencies
+$ npm install
+
+# Start the application in development mode
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<a id="technology"></a>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🚀 Technology
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This project was developed with the following technologies:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- TypeScript
+- React
+- Next.js
 
-## Learn More
+<a id="project"></a>
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Github Profile is the application that shows data of a github user.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<a id="layout"></a>
 
-## Deploy on Vercel
+## Layout
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can view the layout of the project [this link](https://www.figma.com/file/IpaL2SZlHnDJqondb6r8Bi/Github-profiles?node-id=0%3A1). You must have an account at [Figma](https://figma.com) to access it.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a id="license"></a>
+
+## License
+
+This project is under license from MIT. See the archive [LICENSE](.github/LICENSE.md) for more details.
+
+---
+
+<p align="center">Made with :heart: by Tarcisio Delmondes</p>
+
+<br/> :email: &nbsp; Contact me: [![Linkedin Badge](https://img.shields.io/badge/-TarcísioDelmondes-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tarcisio-delmondes-892567207)](https://www.linkedin.com/in/tarcisio-delmondes-892567207)
