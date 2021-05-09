@@ -1,0 +1,11 @@
+.search__desktop {
+  div {
+    display: inline;
+  }
+}
+
+@media (max-width: 720px) {
+  .search__desktop {
+    display: none;
+  }
+}

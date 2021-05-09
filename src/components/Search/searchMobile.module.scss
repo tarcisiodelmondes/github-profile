@@ -1,0 +1,94 @@
+.search__mobile {
+  display: none;
+
+  .menu__checkbox:checked {
+    & ~ .menu__items {
+      display: flex;
+      justify-content: center;
+      opacity: 1;
+      width: 70vw;
+    }
+
+    & ~ .close__menu {
+      display: block;
+    }
+  }
+
+  .close__menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    z-index: 900;
+    opacity: 0.2;
+  }
+
+  .search__container {
+    display: block;
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    .search__icon {
+      width: 60%;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 1.2rem;
+      transform: translate(-50%, -50%);
+      background-color: var(--white-2);
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -7px;
+        left: 0;
+        background-color: inherit;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 7px;
+        left: 0;
+        background-color: inherit;
+      }
+    }
+  }
+
+  .menu__items {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 0vw;
+    z-index: 1000;
+    opacity: 0;
+    background-color: #000;
+    transition: all 0.2s;
+
+    &__links {
+      margin-top: 8rem;
+
+      input {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .search__mobile {
+    display: block;
+  }
+}

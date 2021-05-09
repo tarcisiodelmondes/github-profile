@@ -1,0 +1,19 @@
+.containerHeader {
+  background-color: var(--black);
+  width: 100vw;
+  height: 4.19rem;
+
+  .content {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      color: var(--white-1);
+      font-size: 1.5rem;
+    }
+  }
+}

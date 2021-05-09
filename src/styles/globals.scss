@@ -28,7 +28,6 @@ input,
 textarea,
 button {
   font: 400 1rem karla, sans-serif;
-  color: var(--white);
 }
 
 h1,
@@ -41,14 +40,6 @@ h6 {
   font-family: karla, sans-serif;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
 button {
   cursor: pointer;
 }
@@ -56,4 +47,16 @@ button {
 a:link,
 a:visited {
   text-decoration: none;
+  color: inherit;
+}
+
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
