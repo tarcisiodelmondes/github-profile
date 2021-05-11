@@ -1,16 +1,17 @@
 import Image from "next/image";
 import { useContext } from "react";
+import { ProfileFound } from "../components/Profile/ProfileFound";
 import { ProfileNotFound } from "../components/Profile/ProfileNotFound";
 import { ProfileContext } from "../contexts/ProfileContext";
 
 import styles from "./home.module.scss";
 
 export default function Home() {
-  const { profile, setProfile } = useContext(ProfileContext);
+  const { profile, hasError } = useContext(ProfileContext);
 
   return (
     <>
-      {!profile ? (
+      {!profile && !hasError ? (
         <div className={styles.container}>
           <Image
             width={250}
@@ -19,10 +20,10 @@ export default function Home() {
             alt="Image of github"
           />
         </div>
-      ) : profile.error ? (
+      ) : hasError ? (
         <ProfileNotFound />
       ) : (
-        <h1>Hello world</h1>
+        <ProfileFound />
       )}
     </>
   );

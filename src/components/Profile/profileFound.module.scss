@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__profile_info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 5rem;
+    background-color: var(--white-1);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 2rem 4rem;
+
+    .user_image {
+      border-radius: 50%;
+    }
+
+    .name {
+      margin: 1rem 0 0.2rem 0;
+      font-size: 1.3rem;
+    }
+
+    .username {
+      opacity: 0.5;
+
+      text-align: left;
+    }
+
+    .followers__and__following {
+      color: var(--black);
+
+      .people_icon {
+        color: inherit;
+        padding-top: 2px;
+      }
+    }
+  }
+
+  &__repositories {
+    max-width: 37.5rem;
+    color: var(--black);
+    margin: 2rem;
+
+    .heading__repositories {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .container__repo_data {
+      background-color: var(--white-1);
+      padding: 1rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      .repo__name {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .repo__description {
+        height: 2.5rem;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9;
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    &__profile_info {
+      margin: 0;
+      padding: 4rem 4rem;
+
+      .username {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__repositories {
+      margin-top: 6rem;
+    }
+  }
+}
