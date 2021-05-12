@@ -2,8 +2,6 @@ import Head from "next/head";
 import { Header } from "../components/Header";
 import { ProfileContextProvider } from "../contexts/ProfileContext";
 
-import styles from "./app.module.scss";
-
 import "../styles/globals.scss";
 import "../styles/variables.scss";
 

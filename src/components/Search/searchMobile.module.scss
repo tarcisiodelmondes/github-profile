@@ -12,6 +12,20 @@
     & ~ .close__menu {
       display: block;
     }
+
+    & + .search__container .search__icon {
+      background-color: transparent;
+    }
+
+    & + .search__container .search__icon::before {
+      transform: rotate(135deg);
+      top: 0;
+    }
+
+    & + .search__container .search__icon::after {
+      transform: rotate(-135deg);
+      top: 0;
+    }
   }
 
   .close__menu {
@@ -36,13 +50,18 @@
     position: relative;
 
     .search__icon {
-      width: 60%;
+      width: 1.5rem;
       height: 3px;
-      position: absolute;
-      top: 50%;
-      left: 1.2rem;
+      position: fixed;
+      top: 2.1rem;
+      right: 0;
       transform: translate(-50%, -50%);
       background-color: var(--white-2);
+
+      &::before,
+      &::after {
+        transition: all 0.3s;
+      }
 
       &::before {
         content: "";
@@ -51,7 +70,7 @@
         position: absolute;
         top: -7px;
         left: 0;
-        background-color: inherit;
+        background-color: var(--white-2);
       }
 
       &::after {
@@ -61,7 +80,7 @@
         position: absolute;
         top: 7px;
         left: 0;
-        background-color: inherit;
+        background-color: var(--white-2);
       }
     }
   }

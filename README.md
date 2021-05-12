@@ -27,9 +27,9 @@
 
 ## Functionalities
 
-- [ ] Search profile
-- [ ] Show profile
-- [ ] Shows an alert if the username is not valid
+- [x] Search profile
+- [x] Show profile
+- [x] Shows an alert if the username is not valid
 - [ ] Dark mode
 
 ## Application demo

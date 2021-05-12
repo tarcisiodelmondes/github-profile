@@ -13,6 +13,7 @@ export function Header() {
             <a>Github Profile</a>
           </Link>
         </h1>
+
         <SearchDesktop />
         <SearchMobile />
       </div>

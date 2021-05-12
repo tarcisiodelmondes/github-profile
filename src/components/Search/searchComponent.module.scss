@@ -7,7 +7,7 @@
     background-color: var(--white-3);
 
     &::placeholder {
-      color: rgba(41, 35, 37, 0.5);
+      color: var(--black);
     }
   }
 
@@ -22,7 +22,7 @@
     width: 5rem;
     background-color: var(--black);
     border: 1px solid rgba(229, 229, 229, 0.5);
-    color: var(--white-3);
+    color: var(--white-2);
     transition: filter 0.3s;
 
     &:hover {
