@@ -20,7 +20,7 @@
 <br>
 
 <p align="left">
-  Project status: development
+  Project status: finalized
 </p>
 
 <a id="functionalities"></a>
