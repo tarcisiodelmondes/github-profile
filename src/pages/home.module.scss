@@ -1,4 +1,10 @@
-.container {
+.homepage {
+  background-color: var(--white-2);
+  height: calc(100vh - 4.19rem);
+  overflow-y: scroll;
+}
+
+.github__image {
   position: absolute;
   top: 50%;
   left: 50%;

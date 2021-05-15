@@ -1,10 +1,16 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 import { SearchDesktop } from "../Search/searchDesktop";
 import { SearchMobile } from "../Search/searchMobile";
 
 import styles from "./header.module.scss";
 
-export function Header() {
+interface HeaderProps {
+  toggleTheme: () => void;
+  theme: string;
+}
+
+export function Header({ toggleTheme, theme }: HeaderProps) {
   return (
     <header className={styles.containerHeader}>
       <div className={styles.content}>
@@ -14,8 +20,8 @@ export function Header() {
           </Link>
         </h1>
 
-        <SearchDesktop />
-        <SearchMobile />
+        <SearchDesktop toggleTheme={toggleTheme} theme={theme} />
+        <SearchMobile toggleTheme={toggleTheme} theme={theme} />
       </div>
     </header>
   );

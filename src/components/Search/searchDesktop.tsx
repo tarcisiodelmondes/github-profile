@@ -2,10 +2,15 @@ import { SearchComponent } from "./searchComponent";
 
 import styles from "./searchDesktop.module.scss";
 
-export function SearchDesktop() {
+interface SearchDesktopProps {
+  toggleTheme: () => void;
+  theme: string;
+}
+
+export function SearchDesktop({ toggleTheme, theme }: SearchDesktopProps) {
   return (
     <nav className={styles.search__desktop}>
-      <SearchComponent />
+      <SearchComponent toggleTheme={toggleTheme} theme={theme} />
     </nav>
   );
 }

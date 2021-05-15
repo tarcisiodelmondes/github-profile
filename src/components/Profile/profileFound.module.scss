@@ -1,25 +1,23 @@
 .container {
+  background-color: var(--white-2);
   width: 80%;
+
   margin: 0 auto;
 
   &__profile_info {
     max-width: 300px;
-
     margin: 5rem auto 0 auto;
     background-color: var(--white-1);
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 
     &__content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
+      width: 90%;
+      margin: 0 auto;
       padding: 2rem 0;
+      text-align: center;
 
       .user_image {
-        display: inline-block;
         border-radius: 50%;
       }
 
@@ -27,7 +25,6 @@
         margin: 1rem 0 0.2rem 0;
         font-size: 1.3rem;
         color: var(--black);
-        white-space: nowrap;
       }
 
       .username {
@@ -47,16 +44,20 @@
   }
 
   &__repositories {
-    max-width: 37.5rem;
+    max-width: 50rem;
+    padding-bottom: 2rem;
+    margin-top: 3rem;
+
     color: var(--black);
 
     .heading__repositories {
-      margin: 2rem 0 1rem 0;
+      margin-bottom: 1.5rem;
       font-size: 1.4rem;
     }
 
     .container__repo_data {
       background-color: var(--white-1);
+      padding: 1rem;
 
       &:not(:last-child) {
         margin-bottom: 1rem;
@@ -68,7 +69,6 @@
         margin-bottom: 0.5rem;
         border-bottom: 1px solid transparent;
         transition: border-bottom 0.3s;
-        padding: 1rem 0 0.2rem 0;
 
         &:hover {
           border-bottom: 1px dashed var(--black);
@@ -77,16 +77,9 @@
 
       .repo__description {
         height: 2.5rem;
-        padding: 0 0.5rem 1rem 0;
-
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: 0.9;
-      }
-
-      .repo__name,
-      .repo__description {
-        padding-left: 1rem;
       }
     }
   }
@@ -94,12 +87,12 @@
 
 @media (min-width: 720px) {
   .container {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 5rem;
 
-    width: 90vw;
-    margin: 5rem auto;
+    padding: 5rem;
 
     &__profile_info {
       padding: 1rem 4rem;
@@ -111,10 +104,12 @@
     }
 
     &__repositories {
+      margin-top: 0;
+
       .repo__grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 3fr);
+        grid-template-rows: repeat(2, 3fr);
         gap: 2rem;
 
         .container__repo_data {

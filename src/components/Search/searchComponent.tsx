@@ -1,5 +1,5 @@
 import { AiOutlineSearch } from "react-icons/ai";
-import Link from "next/link";
+import { BiSun, BiMoon } from "react-icons/bi";
 
 import styles from "./searchComponent.module.scss";
 import { api } from "../../services/api";
@@ -7,7 +7,12 @@ import { FormEvent, useContext, useRef } from "react";
 import { formateDateProfile } from "../../utils/formateDateProfile";
 import { ProfileContext } from "../../contexts/ProfileContext";
 
-export function SearchComponent() {
+interface SearchComponentProps {
+  toggleTheme: () => void;
+  theme: string;
+}
+
+export function SearchComponent({ toggleTheme, theme }: SearchComponentProps) {
   const { setError, setProfileData } = useContext(ProfileContext);
 
   const input = useRef(null);
@@ -34,6 +39,22 @@ export function SearchComponent() {
   return (
     <div className={styles.containerSearch}>
       <form className={styles.form}>
+        <div className={styles.container__sun__icon}>
+          {theme === "light" ? (
+            <BiSun
+              onClick={() => toggleTheme()}
+              color="var(--white-3)"
+              className={styles.sun__icon}
+            />
+          ) : (
+            <BiMoon
+              onClick={() => toggleTheme()}
+              color="var(--white-3)"
+              className={styles.sun__icon}
+            />
+          )}
+        </div>
+
         <label htmlFor="username" className="sr-only">
           Search profile
         </label>

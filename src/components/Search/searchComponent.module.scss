@@ -1,6 +1,22 @@
 .containerSearch {
   position: relative;
 
+  .container__sun__icon {
+    position: absolute;
+    top: -6.6rem;
+    right: 12rem;
+
+    .sun__icon {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+  }
+
   input {
     height: 2rem;
     padding: 0 1rem 0 2rem;
@@ -27,6 +43,16 @@
 
     &:hover {
       filter: brightness(1.15);
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .containerSearch {
+    .container__sun__icon {
+      position: absolute;
+      top: 0;
+      right: 2rem;
     }
   }
 }

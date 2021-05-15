@@ -10,9 +10,9 @@ export default function Home() {
   const { profile, hasError } = useContext(ProfileContext);
 
   return (
-    <>
+    <div className={styles.homepage}>
       {!profile && !hasError ? (
-        <div className={styles.container}>
+        <div className={styles.github__image}>
           <Image
             width={250}
             height={250}
@@ -25,6 +25,6 @@ export default function Home() {
       ) : (
         <ProfileFound />
       )}
-    </>
+    </div>
   );
 }

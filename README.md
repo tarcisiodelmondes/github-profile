@@ -30,7 +30,8 @@
 - [x] Search profile
 - [x] Show profile
 - [x] Shows an alert if the username is not valid
-- [ ] Dark mode
+- [x] Dark mode
+- [x] Persisted theme in localStorage
 
 ## Application demo
 

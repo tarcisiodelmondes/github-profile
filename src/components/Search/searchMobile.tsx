@@ -1,7 +1,12 @@
 import styles from "./searchMobile.module.scss";
 import { SearchComponent } from "./searchComponent";
 
-export function SearchMobile() {
+interface SearchMobileProps {
+  toggleTheme: () => void;
+  theme: string;
+}
+
+export function SearchMobile({ toggleTheme, theme }: SearchMobileProps) {
   return (
     <div className={styles.search__mobile}>
       <input
@@ -16,7 +21,7 @@ export function SearchMobile() {
 
       <div className={styles.menu__items}>
         <nav className={styles.menu__items__links}>
-          <SearchComponent />
+          <SearchComponent toggleTheme={toggleTheme} theme={theme} />
         </nav>
       </div>
     </div>
