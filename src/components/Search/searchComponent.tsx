@@ -6,6 +6,7 @@ import { api } from "../../services/api";
 import { FormEvent, useContext, useRef } from "react";
 import { formateDateProfile } from "../../utils/formateDateProfile";
 import { ProfileContext } from "../../contexts/ProfileContext";
+import { LoadingContext } from "../../contexts/LoadingContext";
 
 interface SearchComponentProps {
   toggleTheme: () => void;
@@ -14,6 +15,8 @@ interface SearchComponentProps {
 
 export function SearchComponent({ toggleTheme, theme }: SearchComponentProps) {
   const { setError, setProfileData } = useContext(ProfileContext);
+
+  const { toggleIsLoading } = useContext(LoadingContext);
 
   const input = useRef(null);
 
@@ -25,12 +28,16 @@ export function SearchComponent({ toggleTheme, theme }: SearchComponentProps) {
     if (username.length === 0) return;
 
     try {
+      toggleIsLoading(true);
       const { data } = await api.get(`/users/${username}`);
       const repos = await api.get(`/users/${username}/repos`);
 
       setProfileData(formateDateProfile(data, repos.data));
       setError(false);
+
+      toggleIsLoading(false);
     } catch (error) {
+      toggleIsLoading(false);
       setProfileData(null);
       setError(true);
     }

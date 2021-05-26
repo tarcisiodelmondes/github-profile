@@ -27,8 +27,8 @@ export function ProfileFound() {
           <p className={styles.username}>{profile.username}</p>
 
           <p className={styles.followers__and__following}>
-            <BsPeople className={styles.people_icon} /> {profile.followers}
-            followers - {profile.following} following
+            <BsPeople className={styles.people_icon} />
+            {profile.followers} followers - {profile.following} following
           </p>
         </div>
       </div>

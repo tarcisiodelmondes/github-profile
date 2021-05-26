@@ -6,6 +6,7 @@ import "../styles/globals.scss";
 import "../styles/theme/theme.scss";
 import { useEffect, useState } from "react";
 import { ThemeContextProvider } from "../contexts/ThemeContext";
+import { LoadingContextProvider } from "../contexts/LoadingContext";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState(null);
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeContextProvider theme={theme}>
+      <LoadingContextProvider>
       <div className={`${theme}`}>
         <ProfileContextProvider>
           <Head>
@@ -36,6 +38,7 @@ function MyApp({ Component, pageProps }) {
           </main>
         </ProfileContextProvider>
       </div>
+      </LoadingContextProvider>
     </ThemeContextProvider>
   );
 }

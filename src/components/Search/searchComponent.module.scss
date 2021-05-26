@@ -23,7 +23,8 @@
     background-color: var(--white-3);
 
     &::placeholder {
-      color: var(--black);
+      color: var(--input--placeholder);
+      opacity: 0.5;
     }
   }
 
