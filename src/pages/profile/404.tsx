@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./profileNotFound.module.scss";
+import styles from "./page404.module.scss";
 
-export function ProfileNotFound() {
+export default function Page404() {
   return (
     <div className={styles.container}>
       <h1>User not found</h1>
