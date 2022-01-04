@@ -1,14 +1,32 @@
+import { GetServerSideProps } from "next";
 import Image from "next/image";
-import { useContext } from "react";
-import { ProfileContext } from "../../contexts/ProfileContext";
+import { api } from "../../services/api";
 import { BsPeople } from "react-icons/bs";
-
-import styles from "./profileFound.module.scss";
 import Link from "next/link";
 
-export function ProfileFound() {
-  const { profile } = useContext(ProfileContext);
+import styles from "./styles.module.scss";
+import { getLastFourFormattedRepos } from "../../utils/getLastFourFormattedRepos";
 
+type Repos = {
+  name: string;
+  description: string;
+  url_repo: string;
+};
+
+type ProfileData = {
+  name: string;
+  username: string;
+  image: string;
+  followers: number;
+  following: number;
+  repos: Repos[];
+};
+
+type ProfileProps = {
+  profile: ProfileData;
+};
+
+export default function Profile({ profile }: ProfileProps) {
   return (
     <div className={styles.container}>
       <div className={styles.container__profile_info}>
@@ -54,3 +72,34 @@ export function ProfileFound() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const { username } = params;
+
+  try {
+    const { data } = await api.get(`/users/${username}`);
+
+    const reposData = await api.get(`/users/${username}/repos`);
+    const lastFourRepos = getLastFourFormattedRepos(reposData.data);
+
+    const profile: ProfileData = {
+      name: data.name,
+      username: data.login,
+      image: data.avatar_url,
+      followers: data.followers,
+      following: data.following,
+      repos: lastFourRepos,
+    };
+
+    return {
+      props: { profile },
+    };
+  } catch (error) {
+    return {
+      redirect: {
+        destination: "/profile/404",
+        permanent: false,
+      },
+    };
+  }
+};
