@@ -7,14 +7,26 @@
       justify-content: center;
       opacity: 1;
       width: 70vw;
+      visibility: visible;
+
+      .containerThemeIcon {
+        visibility: visible;
+      }
     }
 
     & ~ .close__menu {
       display: block;
     }
 
+    & + .search__container {
+      position: relative;
+    }
+
     & + .search__container .search__icon {
       background-color: transparent;
+      position: fixed;
+      top: 2.1rem;
+      right: 0;
     }
 
     & + .search__container .search__icon::before {
@@ -28,16 +40,23 @@
     }
   }
 
+  .containerThemeIcon {
+    position: absolute;
+    top: 2.1rem;
+    left: 2rem;
+    transform: translate(-50%, -50%);
+  }
+
   .close__menu {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: var(--text);
     width: 100vw;
     height: 100vh;
     z-index: 900;
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   .search__container {
@@ -47,20 +66,20 @@
     z-index: 2000;
     text-align: center;
     cursor: pointer;
-    position: relative;
 
     .search__icon {
       width: 1.5rem;
       height: 3px;
-      position: fixed;
+      position: absolute;
       top: 2.1rem;
       right: 0;
       transform: translate(-50%, -50%);
-      background-color: var(--white-3);
+      background-color: var(--text);
 
       &::before,
       &::after {
         transition: all 0.3s;
+        background-color: var(--text);
       }
 
       &::before {
@@ -70,7 +89,6 @@
         position: absolute;
         top: -7px;
         left: 0;
-        background-color: var(--white-3);
       }
 
       &::after {
@@ -80,7 +98,6 @@
         position: absolute;
         top: 7px;
         left: 0;
-        background-color: var(--white-3);
       }
     }
   }
@@ -90,24 +107,32 @@
     right: 0;
     top: 0;
     height: 100vh;
-    width: 0vw;
+
     z-index: 1000;
     opacity: 0;
-    background-color: #000;
+    background-color: var(--background);
     transition: all 0.2s;
 
     &__links {
-      margin-top: 8rem;
-
-      input {
-        width: 10rem;
-      }
+      margin-top: 5rem;
+      width: 100%;
+      margin: 5rem auto;
+      padding: 0.5rem;
     }
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 635px) {
   .search__mobile {
     display: block;
+    z-index: 1;
+
+    .containerThemeIcon {
+      visibility: hidden;
+    }
+
+    .menu__items {
+      visibility: hidden;
+    }
   }
 }
