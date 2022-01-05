@@ -24,7 +24,7 @@ export function Header({ toggleTheme, theme }: HeaderProps) {
           <ThemeIcon toggleTheme={toggleTheme} theme={theme} />
 
           <span className={styles.containerSearch}>
-            <Search />
+            <Search htmlFor="search-desktop" />
           </span>
         </nav>
 
