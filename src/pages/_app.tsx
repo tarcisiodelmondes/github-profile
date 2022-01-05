@@ -21,11 +21,6 @@ function MyApp({ Component, pageProps }) {
     <ThemeContextProvider theme={theme}>
       <div className={`${theme}`}>
         <Head>
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
-          />
-
           <title>Github Profile</title>
         </Head>
         <Header toggleTheme={toggleTheme} theme={theme} />
