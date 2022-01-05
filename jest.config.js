@@ -12,6 +12,7 @@ const customJestConfig = {
     "^@/pages/(.*)$": "<rootDir>/pages/$1",
   },
   testEnvironment: "jest-environment-jsdom",
+  testURL: "http:localhost:3000",
 };
 
 module.exports = createJestConfig(customJestConfig);
