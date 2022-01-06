@@ -1,49 +1,54 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import styles from "./search.module.scss";
-import { FormEvent, useRef } from "react";
+import { FormEvent, useState } from "react";
+
+interface SearchProps {
+  htmlFor: string;
+}
 
 import { useRouter } from "next/router";
 
-export function Search() {
+export function Search({ htmlFor }: SearchProps) {
   const router = useRouter();
-  const input = useRef(null);
+  const [username, setUsername] = useState("");
 
   async function searchProfile(event: FormEvent) {
     event.preventDefault();
 
-    const username: string = input.current.value;
+    const user = username.trim();
+    if (user.length === 0) return setUsername("");
 
-    if (username.length === 0) return;
-
-    input.current.value = "";
-    return router.push(`/profile/${username}`);
+    setUsername("");
+    return router.push(`/profile/${user}`);
   }
 
   return (
     <div className={styles.containerSearch}>
-      <form className={styles.form}>
-        <label htmlFor="username" className="sr-only">
+      <form className={styles.form} onSubmit={searchProfile}>
+        <label htmlFor={htmlFor} className="sr-only">
           Search profile
         </label>
 
         <div className={styles.containerInput}>
           <input
-            ref={input}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             type="text"
+            id={htmlFor}
             placeholder="Search profile"
             required
           />
 
           <span>
-            <AiOutlineSearch className={styles.searchIcon} size={16} />
+            <AiOutlineSearch
+              data-testid="search-svg"
+              className={styles.searchIcon}
+              size={16}
+            />
           </span>
         </div>
 
-        <button
-          className={styles.form__button}
-          type="submit"
-          onClick={(event) => searchProfile(event)}
-        >
+        <button className={styles.form__button} type="submit">
           Search
         </button>
       </form>
