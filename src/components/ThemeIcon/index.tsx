@@ -9,11 +9,15 @@ interface ThemeIconProps {
 
 export function ThemeIcon({ theme, toggleTheme }: ThemeIconProps) {
   return (
-    <div className={styles.containerThemeIcon}>
+    <div
+      className={styles.containerThemeIcon}
+      data-testid="contain-icon"
+      onClick={() => toggleTheme()}
+    >
       {theme === "light" ? (
-        <BiSun onClick={() => toggleTheme()} size={24} />
+        <BiSun size={24} data-testid="sun" />
       ) : (
-        <BiMoon onClick={() => toggleTheme()} size={24} />
+        <BiMoon size={24} data-testid="moon" />
       )}
     </div>
   );
