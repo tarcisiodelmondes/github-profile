@@ -16,19 +16,32 @@ export function SearchMobile({ toggleTheme, theme }: SearchMobileProps) {
         className={`${styles.menu__checkbox} sr-only`}
       />
 
-      <label htmlFor="checkbox" className={styles.search__container}>
-        <span className={styles.search__icon}></span>
+      <label
+        htmlFor="checkbox"
+        aria-label="Open the menu"
+        className={styles.search__container}
+        data-testid="open-menu"
+      >
+        <span aria-hidden="true" className={styles.search__icon}></span>
       </label>
 
-      <label htmlFor="checkbox" className={styles.close__menu}></label>
+      <label
+        htmlFor="checkbox"
+        aria-label="Close the menu"
+        className={styles.close__menu}
+        data-testid="close-menu"
+      ></label>
 
       <div className={styles.menu__items}>
-        <div className={styles.containerThemeIcon}>
+        <div
+          data-testid="contain-theme_icon"
+          className={styles.containerThemeIcon}
+        >
           <ThemeIcon toggleTheme={toggleTheme} theme={theme} />
         </div>
 
         <nav className={styles.menu__items__links}>
-          <Search />
+          <Search htmlFor="search-mobile" />
         </nav>
       </div>
     </div>
