@@ -14,7 +14,7 @@ export default function Home() {
         className={styles.img}
       />
       <div className={styles.containerSearch}>
-        <Search />
+        <Search htmlFor="search-mobile-bottom" />
       </div>
     </main>
   );
