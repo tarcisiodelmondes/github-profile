@@ -7,7 +7,6 @@
 <a href="#requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">License</a>
 </p>
 
@@ -35,7 +34,7 @@
 
 ## Application demo
 
-Access: [https://github-profile-khaki.vercel.app](https://github-profile-khaki.vercel.app/)
+Access: [https://agitated-knuth-7c0749.netlify.app](https://agitated-knuth-7c0749.netlify.app/)
 
 <a id="requirements"></a>
 
@@ -61,6 +60,9 @@ $ npm install
 
 # Start the application in development mode
 $ npm run dev
+
+# Run tests
+$ npm run test
 ```
 
 <a id="technology"></a>
@@ -79,12 +81,6 @@ This project was developed with the following technologies:
 
 Github Profile is the application that shows data of a github user.
 
-<a id="layout"></a>
-
-## Layout
-
-You can view the layout of the project [this link](https://www.figma.com/file/IpaL2SZlHnDJqondb6r8Bi/Github-profiles?node-id=0%3A1). You must have an account at [Figma](https://figma.com) to access it.
-
 <a id="license"></a>
 
 ## License
@@ -95,4 +91,4 @@ This project is under license from MIT. See the archive [LICENSE](.github/LICENS
 
 <p align="center">Made with :heart: by Tarcisio Delmondes</p>
 
-<br/> :email: &nbsp; Contact me: [![Linkedin Badge](https://img.shields.io/badge/-TarcísioDelmondes-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tarcisio-delmondes-892567207)](https://www.linkedin.com/in/tarcisio-delmondes)
+<br/> :email: &nbsp; Contact me: [![Linkedin Badge](https://img.shields.io/badge/-TarcísioDelmondes-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tarcisio-delmondes-892567207)](https://www.linkedin.com/in/tarcisiodelmondes)
