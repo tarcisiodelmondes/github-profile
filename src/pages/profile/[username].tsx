@@ -45,11 +45,15 @@ export default function Profile({ profile }: ProfileProps) {
           <p className={styles.username}>{profile.username}</p>
 
           <p className={styles.followers__and__following}>
-            <BsPeople className={styles.people_icon} />
+            <BsPeople
+              data-testid="people_icon"
+              className={styles.people_icon}
+            />
             {profile.followers} followers - {profile.following} following
           </p>
         </div>
       </div>
+
       <div className={styles.container__repositories}>
         <h2 className={styles.heading__repositories}>Repositories:</h2>
 
