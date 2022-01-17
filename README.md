@@ -22,6 +22,8 @@
   Project status: finalized
 </p>
 
+ <img src="./.github/github-profile.png" alt="Github Profile" />
+
 <a id="functionalities"></a>
 
 ## Functionalities
